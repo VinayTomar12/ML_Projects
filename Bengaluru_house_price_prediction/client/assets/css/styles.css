@@ -1,0 +1,61 @@
+body {
+    background-image: url(/assets/img/architecture-black-and-white-building-business-273209.jpg);
+    background-position: top;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 682px;
+}
+
+.container{
+  padding: 20px;
+  margin-top: 10px; 
+  background-color:rgba(255, 255, 255, 0.76);
+}
+
+h2 {
+    margin: 5px;
+    background-color: rgba(255,255,255,0);
+}
+
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    border-radius: 5px;
+    height: 10px; /* Specified height */
+    background: #b8bbbb; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    border-radius: 50%;
+    height: 25px; /* Slider handle height */
+    background: rgb(60, 149, 231); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    border-radius: 50%;
+    background: rgb(60, 149, 231); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }

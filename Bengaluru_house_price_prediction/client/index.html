@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BHPP</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-center"><h2>Bengaluru House Price Prediction</h2></div>
+            <form>
+                <div class="form-group">
+                    <label for="sel1">Location:</label>
+                    <select class="form-control" id="sel1" name='location'>
+                      <option value="" disabled="disabled" selected="selected">-- select a location -- </option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label>Total Area (in .sqft):</label>
+                <input class="form-control" min="100" value="1000" type="number" id="sqft" name="sqft">
+            </div>
+            <div class="form-group">
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input selected" name="bhk" value="1"/>1 BHK
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="bhk" value="2"/>2 BHK
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="bhk" value="3"/>3 BHK
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="bhk" value="4"/>4 BHK
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="bhk" value="5"/>5 BHK
+                    </label>
+                  </div>
+            </div>
+            <div class="form-group">
+                <div class="slidecontainer">
+                    <p>No. of Bathrooms: <span id="demo"></span></p>
+                    <input name='bath' type="range" min="1" max="6" value="2" class=".form-control-range slider" id="myRange">
+                </div>
+            </div>
+            <br>
+            <div class="form-group text-center">
+              <input type="button" value="Predict Price" onclick="PredictPrice()" name="Sumbit" class="btn btn-primary text-center border rounded"  style="filter: contrast(116%);">
+            </div>
+            </form>
+       </div>
+
+    <div class="container">
+      <div id="uiPredictPrice" class="result"></div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+
+</body>
+
+</html>
