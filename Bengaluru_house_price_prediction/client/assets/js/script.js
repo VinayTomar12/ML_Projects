@@ -1,6 +1,6 @@
 // get location:
 function onPageLoad(){
-  var url = "https://morning-earth-09447.herokuapp.com/locations";
+  var url = " https://bengaluru-house-price-predict.herokuapp.com/locations";
   $.get(url, function(data, status){
     console.log("got response for get_location_names request");
     if(data) {
@@ -40,7 +40,7 @@ function PredictPrice(){
   var sqft = document.getElementById("sqft").value;
   var preprice = document.getElementById("uiPredictPrice");
   console.log("Values: bhk:"+bhk+" bath: "+bath+" sqft:"+sqft);
-  var url = "https://morning-earth-09447.herokuapp.com/predict_home_price";
+  var url = " https://bengaluru-house-price-predict.herokuapp.com/predict_price";
   $.post(url, {
      location:location.value,
      total_sqft: parseFloat(sqft),

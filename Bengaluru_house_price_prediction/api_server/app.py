@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import json 
 import pickle
 import numpy as np
@@ -15,6 +15,7 @@ __model = None
 # Routines:
 # Home:
 @app.route('/')
+@cross_origin(origin='*')
 def index():
     return "<h1>Bengaluru House Price Prediction API serving..</h1>"
 # Locations fetcher:
@@ -24,11 +25,12 @@ def locations():
     response = jsonify({
         'locations': get_location_names()
     })
-    response.headers.add('Access-Control-Allow-Origin', '*')
+    # response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 # Predictor
 @app.route('/predict_price', methods=['GET', 'POST'])
+@cross_origin(origin='*')
 def predict_price():
     total_sqft = float(request.form['total_sqft'])
     location = request.form['location']
@@ -38,7 +40,11 @@ def predict_price():
     response = jsonify({
         'estimated_price': get_estimated_price(location,total_sqft,bhk,bath)
     })
-    response.headers.add('Access-Control-Allow-Origin', '*')
+    
+    # response.set_cookie('same-site-cookie', 'foo', samesite='Lax')
+    # Ensure you use "add" to not overwrite existing cookie headers
+    # response.headers.add('Set-Cookie','cross-site-cookie=bar; SameSite=None; Secure')
+    # response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 
