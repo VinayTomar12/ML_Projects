@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import json 
 import pickle
 import numpy as np
 
 app = Flask(__name__)
+CORS(app)
 
 __locations = None
 __data_columns = None
