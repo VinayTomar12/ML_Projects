@@ -4,7 +4,7 @@ flask-cors
 gunicorn==20.0.4
 itsdangerous==1.1.0
 Jinja2==2.10.3
-joblib==0.14.1
+joblib==1.2.0
 MarkupSafe==1.1.1
 numpy==1.18.1
 scikit-learn==0.22.1
